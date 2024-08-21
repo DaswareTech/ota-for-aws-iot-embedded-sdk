@@ -6,6 +6,8 @@
 # are not added to the variables.
 
 # OTA library source files, including 3rdparties.
+include( ${CMAKE_CURRENT_LIST_DIR}/otaDependencyFilePaths.cmake )
+
 set( OTA_SOURCES
     "${CMAKE_CURRENT_LIST_DIR}/source/include/ota.h"
     "${CMAKE_CURRENT_LIST_DIR}/source/include/ota_os_interface.h"
@@ -16,6 +18,8 @@ set( OTA_SOURCES
     "${CMAKE_CURRENT_LIST_DIR}/source/ota.c"
     "${CMAKE_CURRENT_LIST_DIR}/source/ota_interface.c"
     "${CMAKE_CURRENT_LIST_DIR}/source/ota_base64.c"
+    "${JSON_SOURCES}"
+    "${TINYCBOR_SOURCES}"
 )
 
 # OTA library public include directories.
@@ -27,6 +31,8 @@ set( OTA_INCLUDE_PUBLIC_DIRS
 # OTA library private include directories.
 set( OTA_INCLUDE_PRIVATE_DIRS
     "${CMAKE_CURRENT_LIST_DIR}/source"
+    "${TINYCBOR_INCLUDE_DIRS}"
+    "${JSON_INCLUDE_PUBLIC_DIRS}"
 )
 
 # OTA library POSIX OS porting source files.
