@@ -1,11 +1,9 @@
 [submodule "coreJSON"]
 	path = source/dependency/coreJSON
 	url = https://github.com/FreeRTOS/coreJSON.git
-	update = none
 [submodule "tinycbor"]
 	path = source/dependency/3rdparty/tinycbor
 	url = https://github.com/intel/tinycbor.git
-	update = none
 [submodule "test/unit-test/CMock"]
 	path = test/unit-test/CMock
 	url = https://github.com/ThrowTheSwitch/CMock.git
